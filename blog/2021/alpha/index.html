@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Abalfazl  Zareei | Insider_paper</title>
+<title>Abalfazl  Zareei | You Find an Alpha, and then ...</title>
 <meta name="description" content="Personal homepage of Abalfazl Zareei.
 ">
 
@@ -29,7 +29,7 @@
 <link rel="shortcut icon" href="/abizareei/assets/img/favicon.ico">
 <link rel="stylesheet" href="/abizareei/assets/css/main.css">
 
-<link rel="canonical" href="/abizareei/news/insider_paper/">
+<link rel="canonical" href="/abizareei/blog/2021/alpha/">
 
 <!-- Theming-->
 
@@ -125,7 +125,7 @@
           
           
           <!-- Blog -->
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="/abizareei/blog/">
               blog
               
@@ -148,12 +148,22 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Insider_paper</h1>
-    <p class="post-meta">July 2, 2021</p>
+    <h1 class="post-title">You Find an Alpha, and then ...</h1>
+    <p class="post-meta">October 2, 2021</p>
   </header>
 
   <article class="post-content">
-    <p>I presented the paper, “Following Insiders” with Jonathan Brogaard (SSRN draft will be out soon) at 28th Finance Forum (the Annual Meeting of the Spanish Finance Association).</p>
+    <p>Let’s say you test your strategy and observed an alpha (abnormal return). Good! Now, what? Should you invest?</p>
+
+<p>Well, it depends! First, you need to figure out why you observe this alpha. There can be three reasons to pick up an alpha when evaluating a strategy. One is that your model is wrong! Simply put, there is a <strong>risk-based explanation</strong> for your alpha; but, you can not see it because you do not have the right model. Therefore, even if you invest thinking that you found mispricing, in reality it can be risk that you are taking!</p>
+
+<p>Another explanation is that what you observe is due to <strong>data-snooping</strong>! You observe the alpha because your data wants you to see an alpha; but in reality, there is nothing there. This can happen because you tried many many many times to build an alpha strategy with one dataset. With a 10% significant level for your alpha t-stats, there is a 10% chance of picking alphas while it is not there. If you test 100 different strategies, 10 of them can show up significant out of chance (This is why you should control for multiple-testing in your search for alpha! — There is an emerging literature on this, check it out.) To overcome this issue, try using higher t-stats (above 3) or checking the performance of your strategy on another dataset (think about another country’s stock market or new out-of-sample data).</p>
+
+<p>A third explanation is that what you observe is alpha due to mispricing! and Boom! But, can you invest? Well, it is not that straightforward! First, you need to bring in the transaction cost. It can be that you observe good alpha but it disappears right after you take the transaction costs into account. Transaction costs can be hurtful to your strategy for two main reasons: First, it can be that your strategy has a high turnover (e.g. in monthly rebalancing, you buy and sell too much!). Second, it can be that your strategy invests on small and\or illiquid stocks. Those with high bid-ask spread— high transaction costs.</p>
+
+<p>There is still one more hurdle to pass and that is the price impact. Simply, how much can you trade on this alpha? Here, your asset under management and how much you are thinking to use for the strategy comes into play. Think of a mispricing that is high, significant, with low data-snooping concerns. Very nice! But, is that an abnormal return that you can earn on a million, a 100 million or a billion?</p>
+
+<p>These are the hurdles that come to my mind before putting an alpha strategy into production. Lots of work, huh! And there is a whole industry doing that! This makes one think it likely that the markets are efficiently inefficient!!!</p>
 
   </article>
 
