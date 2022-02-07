@@ -153,11 +153,11 @@
   </header>
 
   <article class="post-content">
-    <p>Whenever we are building a statistical model, we face a trade-off between flexibility and interpretability. We can do a simple <em>linear</em> model, easy to understand, interpret and use for inference. However, linear relationships are not enough for modeling complex relations. On the other hand, we can go for a deep learning model with multiple layers of neurons. These models are good at modeling complex relationships; but, they need lots of data and are hard to interpret.</p>
+    <p>Whenever we build a statistical model, we face a trade-off between flexibility and interpretability. We can do a simple <em>linear</em> model, easy to understand, interpret and use for inference. However, linear relationships are not enough for modeling complex relations. On the other hand, we can go for a deep learning model with multiple layers of neurons. These models are good at modeling complex relationships, but they need lots of data and are hard to interpret.</p>
 
-<p><strong>GAMs are right in the middle! They can be fit to complex non-linear relationships. At the same time, we are able to do inferential statistics and understand the underlying the “why” in the model.</strong></p>
+<p><strong>GAMs are right in the middle! They can be fit to complex non-linear relationships. At the same time, we are able to do inferential statistics and understand the underlying “why” in the model.</strong></p>
 
-<p>In this article, I take a first step to describe GAMs.  Let’s say we have multiple predictors \(X_{1}, X_{2}, ... , X_{P}\) . Our goal is to estimate a general regression model:</p>
+<p>In this article, I take a first step to describe GAMs. Let’s say we have multiple predictors \(X_{1}, X_{2}, ... , X_{P}\) . Our goal is to estimate a general regression model:</p>
 
 \[Y=f(X_{1},X_{2},...,X_{P}) + \epsilon\]
 
@@ -169,13 +169,13 @@
 
 <p>Here, the \(f_{j}\) is a nonparametric function and relates the predictor variables to the outcome, <em>non-linearly.</em></p>
 
-<p>In a general format, we can relate the conditional mean of Y, with a function g as follows:</p>
+<p>In a general format, we can relate the conditional mean of \(Y\) with a function \(g\) as follows:</p>
 
 \[g(E(Y))=\alpha + f_{1}(X_{1}) + ,f_{2}(X_{2})+...+f_{P}(X_{P})\]
 
 <p>Here, \(g\) can be an identity link, a logit function (for two-class classification), a probit function, or a log function.</p>
 
-<p>With GAMs, we have both the flexibility in modeling non-linear relationship between the dependent and independent variables and also we are able to interpret the relations. Note that in our model setup, we can also assume linear \(f_{j}\) functions. or include interactive terms. For example, in predicting excess returns using stock characteristics, besides the characteristics individually, we can bring in the interaction of macroeconomic variables with the stock characteristics.</p>
+<p>With GAMs, we have both the flexibility in modeling non-linear relationships between the dependent and independent variables, and also we are able to interpret the relations. Note that in our model setup, we can also assume linear \(f_{j}\) functions. Or include interactive terms. For example, in predicting excess returns using stock characteristics, besides the characteristics individually, we can bring in the interaction of macroeconomic variables with the stock characteristics.</p>
 
 <p>Next, I will discuss the GAMs estimation procedure.</p>
 
@@ -195,7 +195,7 @@
     &copy; Copyright 2022 Abalfazl  Zareei.
     <!--  -->     
     
-    Last updated: February 02, 2022.
+    Last updated: February 07, 2022.
     
   </div>
 </footer>

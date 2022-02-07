@@ -161,7 +161,7 @@
 
 \[RSS=\sum_{i=1}^{N}(y_{i}-\alpha-\sum_{j=1}^{p}f_{j}(x_{ij}))^2+\sum_{j=1}^{p}\lambda_{j}\int f_{j}^{''}(t_{j})^2dt_{j}\]
 
-<p>The first term in the above equation measures how close our functions are to the data and the second term, penalizes curvature in the estimated functions. The \(\lambda_{j}\), the smoothing parameter, decides on the tradeoff for each function \(j\). If \(\lambda\) is infinitive, then we are only looking for a simple linear fit; because no curvature (second order derivative) is tolerated!</p>
+<p>The first term in the above equation measures how close our functions are to the data, and the second term penalizes curvature in the estimated functions. The \(\lambda_{j}\), the smoothing parameter, decides on the tradeoff for each function \(j\). If \(\lambda\) is infinitive, then we are only looking for a simple linear fit; because no curvature (second-order derivative) is tolerated!</p>
 
 <p>Naturally, the cubic splines can be estimated for the functions, \(f_{j}\). How do we estimate them? Let’s see.</p>
 
@@ -181,11 +181,11 @@
 
 \[\hat{f}_{j}\leftarrow \hat{f}_{j}-\frac{1}{N}\sum_{i=1}^{N}\hat{f}_{j}(x_{ij})\]
 
-<p>We repeat the above until the functions stabilize (or change less than a prespecified threshold). I should note that, in the above algorithm, we can use other fitting methods instead of splines, different functions for different variables, and also functions that include interactions between variables. The overall point is this: <strong><em>we can control the non-linearity in a way that we can interpret it</em></strong>.  Isn’t that wonderful?</p>
+<p>We repeat the above until the functions stabilize (or change less than a prespecified threshold). I should note that, in the above algorithm, we can use other fitting methods instead of splines, different functions for different variables, and functions that include interactions between variables. The overall point is this: <strong><em>we can control the non-linearity in a way that we can interpret it</em></strong>. Isn’t that wonderful?</p>
 
-<p>Next, I will run the GAMs model in python on a simple example and soon, I will check it’s performance on predicting assets’ excess return. But before, let me give you an overview of the evolution from linear models to GAMs.</p>
+<p>Next, I will run the GAMs model in python on a simple example, and soon, I will check its performance on predicting assets’ excess return. But before, let me give you an overview of the evolution from linear models to GAMs.</p>
 
-<p>Let’s say we have a dependent variable \(y\) and two independent variables, \(X_{1}\) and \(X_{2}\). In the simplest form, we have the standard linear model in which independent variable related to the the mean dependent variable linearly as follows:</p>
+<p>Let’s say we have a dependent variable \(y\) and two independent variables, \(X_{1}\) and \(X_{2}\). In the simplest form, we have the standard linear model in which independent variable related to the mean dependent variable linearly as follows:</p>
 
 <ul>
   <li><strong>Linear model</strong></li>
@@ -194,7 +194,7 @@
 \[y\sim\mathcal{N}(\mu,\sigma^{2})\\
 \mu = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2}\]
 
-<p>Next, in order to add non-linearity to our linear models, we can use polynomial models. We can use the same procedure as in the linear model to estimate the coefficients. As an example, we have:</p>
+<p>Next, to add non-linearity to our linear models, we can use polynomial models. We can use the same procedure as the linear model to estimate the coefficients. As an example, we have:</p>
 
 <ul>
   <li><strong>Polynomial</strong></li>
@@ -203,7 +203,7 @@
 \[y\sim\mathcal{N}(\mu,\sigma^{2})\\
 \mu = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2}^{2}\]
 
-<p>Next, we have the Generalized Linear Model (GLM) in which we use a link function (\(g\)) to relate the predictors to the response variable. It is modeled as follows:</p>
+<p>Next, we have the Generalized Linear Model (GLM), in which we use a link function (\(g\)) to relate the predictors to the response variable. It is modeled as follows:</p>
 
 <ul>
   <li><strong>GLM</strong></li>
@@ -212,7 +212,7 @@
 \[y\sim\mathcal{N}(\mu,\sigma^{2})\\
 \mu = g^{-1}(\beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2}^{2})\]
 
-<p>And finally, we have the Generalized Additive Models (GAMs) in which the predictors related to the response variables with a link function $g$  and in addition, the independent variables are free to choose how they relate to the response variable with functions, \(f_{j}\).</p>
+<p>And finally, we have the Generalized Additive Models (GAMs) in which the predictors are related to the response variables with a link function \(g\). In addition, the independent variables are free to choose how they relate to the response variable with functions, \(f_{j}\).</p>
 
 <ul>
   <li><strong>GAMs</strong></li>
@@ -239,7 +239,7 @@
     &copy; Copyright 2022 Abalfazl  Zareei.
     <!--  -->     
     
-    Last updated: February 02, 2022.
+    Last updated: February 07, 2022.
     
   </div>
 </footer>
